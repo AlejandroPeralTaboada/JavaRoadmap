@@ -20,7 +20,7 @@ public class ClassesAndFields {
     public final String shareableField = "Getter is recommended but at least cannot be modified if the type is immutable as well";
     protected final String mightBeOkButIsBetter = "Not used a lot";
     final String notUsualButOk = "Not used a lot";
-    private final String BEST = "Tha BEST :D";
+    private final String best = "Tha BEST :D";
 
 
 }

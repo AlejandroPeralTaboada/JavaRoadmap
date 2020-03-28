@@ -26,6 +26,9 @@ public class ClassInterface {
         String doMyMethod1() {
             return ":D";
         }
+        String moreMethods(){
+            return ":(";
+        }
     }
 
     public static void main(String[] args) {

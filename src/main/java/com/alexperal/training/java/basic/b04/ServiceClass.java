@@ -11,6 +11,9 @@ public class ServiceClass {
         ooClass.changeName("New Name");
         String s1 = ooClass.computeIdentifier();
         return new PojoBetterJava14Class(id, s1);
+    }
 
+    public static void main(String[] args) {
+        System.out.println("The Result is: " + new ServiceClass().result());
     }
 }

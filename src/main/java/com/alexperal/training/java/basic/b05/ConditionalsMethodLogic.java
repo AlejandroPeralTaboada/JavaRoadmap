@@ -11,6 +11,18 @@ public class ConditionalsMethodLogic {
         }
     }
 
+    enum GreetType {
+        WELCOME, BYE
+    }
+
+    private static String enhancedGreet(String name, GreetType isWelcome) {
+        String greet = switch (isWelcome) {
+            case WELCOME -> "Hello ";
+            case BYE -> "Bye ";
+        };
+        return greet + name;
+    }
+
     interface PolymorphicGreet {
         String greet(String name);
     }
@@ -31,7 +43,7 @@ public class ConditionalsMethodLogic {
         }
     }
 
-    static String greetSomeone(PolymorphicGreet greeting, String name){
+    static String greetSomeone(PolymorphicGreet greeting, String name) {
         return greeting.greet(name);
     }
 
@@ -39,11 +51,14 @@ public class ConditionalsMethodLogic {
         System.out.println(greet("Alex", true));
         System.out.println(greet("Alex", false));
 
+        System.out.println(enhancedGreet("Alex", GreetType.WELCOME));
+        System.out.println(enhancedGreet("Alex", GreetType.BYE));
+
         System.out.println(new WelcomeGreet().greet("Alex"));
         System.out.println(new ByeGreet().greet("Alex"));
 
-        System.out.println(greetSomeone(new WelcomeGreet(),"John"));
-        System.out.println(greetSomeone(new ByeGreet(),"John"));
+        System.out.println(greetSomeone(new WelcomeGreet(), "John"));
+        System.out.println(greetSomeone(new ByeGreet(), "John"));
 
     }
 }

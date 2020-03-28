@@ -1,7 +1,9 @@
 package com.alexperal.training.java.basic.b02;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class GetClassMethod {
 
@@ -20,9 +22,8 @@ public class GetClassMethod {
         System.out.println(aClass);
         System.out.println(Arrays.toString(aClass.getDeclaredMethods()));
         Field[] declaredFields = aClass.getDeclaredFields();
-        Field declaredField = declaredFields[1];
+        Field declaredField = declaredFields[0];
         MyClass o1 = new MyClass(2);
-
         System.out.println(declaredField.get(o1));
     }
 }
