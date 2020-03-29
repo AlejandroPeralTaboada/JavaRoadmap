@@ -2,6 +2,7 @@ package com.alexperal.training.java.lists.l01;
 
 /**
  * An ordered collection of ints
+ *
  * @since 1.0-SNAPSHOT
  */
 public interface MinimalIntList {
@@ -36,6 +37,17 @@ public interface MinimalIntList {
      *                                   ({@code index < 0 || index >= size()})
      */
     int get(int index);
+
+
+    /**
+     * Sets the value at the specified position by index in this list.
+     *
+     * @param index index of the element to return
+     * @param value value to be stored at the specified position
+     * @throws IndexOutOfBoundsException if the index is out of range
+     *                                   ({@code index < 0 || index >= size()})
+     */
+    void set(int index, int value);
 
     /**
      * Removes the element at the specified position in this list.
