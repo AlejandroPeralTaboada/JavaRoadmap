@@ -50,6 +50,7 @@ public class Exceptions {
             } catch (IllegalArgumentException e) {
                 // This will not capture the illegal state
                 e.printStackTrace();
+                throw e;
             }
         } catch (Exception e) {
             // This will capture everything
@@ -70,7 +71,7 @@ public class Exceptions {
         try {
             checkedExceptionMethod2();
             checkedExceptionMethod3();
-        } catch (ZipException | MalformedURLException e) {
+        } catch (Exception e) {
             // You can catch multiple types of exceptions in the same catch clause
         }
     }

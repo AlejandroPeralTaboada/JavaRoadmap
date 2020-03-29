@@ -10,7 +10,8 @@ public class Loops {
         }
         System.out.println();
 
-        for (Integer integer : List.of(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)) {
+        List<Integer> list = List.of(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
+        for (Integer integer : list) {
             System.out.print(integer);
         }
         System.out.println();
@@ -31,10 +32,9 @@ public class Loops {
         System.out.println();
 
         LocalDate today = LocalDate.now();
-        LocalDate nextWeek = LocalDate.now().plusDays(7);
+        LocalDate nextWeek = today.plusDays(7);
         for (LocalDate weekDay = today; weekDay.isBefore(nextWeek); weekDay = weekDay.plusDays(1)) {
             System.out.println(weekDay.getDayOfWeek().name());
         }
-
     }
 }
