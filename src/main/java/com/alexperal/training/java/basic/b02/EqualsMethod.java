@@ -33,8 +33,8 @@ public class EqualsMethod {
         }
     }
 
-    static record MyRecord(int i) {
-    }
+    //static record MyRecord(int i) {
+    //}
 
     public static void main(String[] args) throws IllegalAccessException {
         MyClass c1 = new MyClass(1);
@@ -53,18 +53,18 @@ public class EqualsMethod {
         System.out.println("Is variable c3 the same object as c4: "+(c3==c4));
         System.out.println();
 
-        MyRecord r1 = new MyRecord(1);
-        MyRecord r2 = new MyRecord(1);
-        System.out.println("Is variable r1 equals to r1: "+r1.equals(r1));
-        System.out.println("Is variable r1 equals to r2: "+r1.equals(r2));
-        System.out.println("Is variable r1 the same object as r1: "+(r1==r1));
-        System.out.println("Is variable r1 the same object as r2: "+(r1==r2));
+        //MyRecord r1 = new MyRecord(1);
+        //MyRecord r2 = new MyRecord(1);
+        //System.out.println("Is variable r1 equals to r1: "+r1.equals(r1));
+        //System.out.println("Is variable r1 equals to r2: "+r1.equals(r2));
+        //System.out.println("Is variable r1 the same object as r1: "+(r1==r1));
+        //System.out.println("Is variable r1 the same object as r2: "+(r1==r2));
         System.out.println();
 
 
         System.out.println("Is variable c1 equals to c3: "+c1.equals(c3));
         System.out.println("Is variable c3 equals to c1: "+c3.equals(c1));
-        System.out.println("Is variable c3 equals to r1: "+c3.equals(r1));
-        System.out.println("Is variable r1 equals to c3: "+r1.equals(c3));
+        //System.out.println("Is variable c3 equals to r1: "+c3.equals(r1));
+        //System.out.println("Is variable r1 equals to c3: "+r1.equals(c3));
     }
 }

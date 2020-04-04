@@ -2,6 +2,8 @@ package com.alexperal.training.java.lists.l02;
 
 import com.alexperal.training.java.lists.l01.MinimalIntList;
 
+import java.util.List;
+
 /**
  * Sorts using the bubble sort algorithm.
  *
@@ -10,11 +12,32 @@ import com.alexperal.training.java.lists.l01.MinimalIntList;
  *
  * https://en.wikipedia.org/wiki/Bubble_sort
  */
-public class Sorting01BubbleSort implements Sorting00Sorter{
+public class Sorting01BubbleSort implements Sorting00Sorter {
 
 
     @Override
-    public void sort(MinimalIntList list) {
+    public MinimalIntList sort(MinimalIntList list) {
+        if(list.length() <= 1) {
+            return list;
+        }
+        for(int i = 0; i < list.length(); i++) {
+            for(int j = 0; j < list.length() - 1; j++) {
+                if(list.get(j) > list.get(j + 1)) {
+                    int placeHolder = list.get(j);
+                    list.set(j, list.get(j + 1));
+                    list.set(j + 1, placeHolder);
+                }
+            }
+        }
+        return list;
+    }
 
+    public boolean isSorted(MinimalIntList list) {
+        for (int i = 0; i < list.length() - 1; i++) {
+            if(list.get(i) > list.get(i + 1)) {
+                return false;
+            }
+        }
+        return true;
     }
 }
