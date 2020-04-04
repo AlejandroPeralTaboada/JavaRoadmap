@@ -33,8 +33,8 @@ public class HashCodeMethod {
         }
     }
 
-    static record MyRecord(int i) {
-    }
+    //static record MyRecord(int i) {
+    //}
 
     public static void main(String[] args) throws IllegalAccessException {
         MyClass o1 = new MyClass(1);
@@ -46,8 +46,8 @@ public class HashCodeMethod {
         MyClass2 o2 = new MyClass2(1);
         System.out.println("My variable o2 is printed as: '" + o2.hashCode() + "' because to String method is overwritten");
         System.out.println();
-        MyRecord o3 = new MyRecord(1);
-        System.out.println("My variable o3 is printed as: '" + o3.hashCode() + "' because it is a record");
+        //MyRecord o3 = new MyRecord(1);
+        //System.out.println("My variable o3 is printed as: '" + o3.hashCode() + "' because it is a record");
 
     }
 }

@@ -15,7 +15,13 @@ public class Sorting05EnhancedMergeSort implements Sorting00Sorter{
 
 
     @Override
-    public void sort(MinimalIntList list) {
+    public MinimalIntList sort(MinimalIntList list) {
 
+        return list;
+    }
+
+    @Override
+    public boolean isSorted(MinimalIntList list) {
+        return false;
     }
 }

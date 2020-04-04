@@ -25,8 +25,8 @@ public class ToStringMethod {
         }
     }
 
-    static record MyRecord(int i) {
-    }
+    //static record MyRecord(int i) {
+    //}
 
     public static void main(String[] args) throws IllegalAccessException {
         MyClass o1 = new MyClass(1);
@@ -38,8 +38,8 @@ public class ToStringMethod {
         MyClass2 o2 = new MyClass2(1);
         System.out.println("My variable o2 is printed as: '" + o2 + "' because to String method is overwritten");
         System.out.println();
-        MyRecord o3 = new MyRecord(1);
-        System.out.println("My variable o3 is printed as: '" + o3 + "' because it is a record");
+       /* MyRecord o3 = new MyRecord(1);*/
+        //System.out.println("My variable o3 is printed as: '" + o3 + "' because it is a record");
 
     }
 }
