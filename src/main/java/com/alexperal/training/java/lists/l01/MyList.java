@@ -2,7 +2,6 @@ package com.alexperal.training.java.lists.l01;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 public class MyList implements MinimalIntList {
 

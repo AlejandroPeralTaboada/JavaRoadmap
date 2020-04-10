@@ -12,15 +12,23 @@ import com.alexperal.training.java.lists.l01.MinimalIntList;
  */
 public class Sorting02SelectionSort implements Sorting00Sorter{
 
-
     @Override
     public MinimalIntList sort(MinimalIntList list) {
-
+        for(int i = 0; i < list.length(); i++) {
+            int currentMin = list.get(i);
+            int minIndex = i;
+            int newMinIndex = 0;
+           for(int j = i; j < list.length(); j++) {
+               if(list.get(j) < currentMin) {
+                    currentMin = list.get(j);
+                    newMinIndex = j;
+               }
+           }
+           int temp = list.get(i);
+           list.set(i, currentMin);
+           list.set(newMinIndex, temp);
+        }
         return list;
     }
 
-    @Override
-    public boolean isSorted(MinimalIntList list) {
-        return false;
-    }
 }

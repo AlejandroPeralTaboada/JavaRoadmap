@@ -19,8 +19,4 @@ public class Sorting03InsertionSort implements Sorting00Sorter{
         return list;
     }
 
-    @Override
-    public boolean isSorted(MinimalIntList list) {
-        return false;
-    }
 }

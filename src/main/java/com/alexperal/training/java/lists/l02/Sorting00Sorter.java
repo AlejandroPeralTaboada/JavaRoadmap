@@ -17,5 +17,12 @@ public interface Sorting00Sorter {
      * Checks if list is sorted
      * @param list the list after it goes through sorted method
      */
-    boolean isSorted(MinimalIntList list);
+    default boolean isSorted(MinimalIntList list) {
+        for (int i = 0; i < list.length() - 1; i++) {
+            if(list.get(i) > list.get(i + 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
