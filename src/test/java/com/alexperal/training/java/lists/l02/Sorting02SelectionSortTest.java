@@ -2,20 +2,11 @@ package com.alexperal.training.java.lists.l02;
 
 import com.alexperal.training.java.lists.l01.MinimalIntList;
 import com.alexperal.training.java.lists.l01.MyList;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class Sorting01BubbleSortTest {
-
-    private Sorting00Sorter sorter;
-
-    @BeforeEach
-    public void initBeforeTest() {
-        sorter = new Sorting04MergeSort();
-    }
-
+public class Sorting02SelectionSortTest {
     @Test
     public void sortEmptyList() {
         MinimalIntList list = new MyList();
@@ -25,12 +16,13 @@ class Sorting01BubbleSortTest {
     @Test
     public void unsortedList() {
         MinimalIntList list = new MyList();
+        Sorting00Sorter selectionSort = new Sorting02SelectionSort();
         list.add(5);
         list.add(1);
         list.add(9);
         list.add(3);
         list.add(4);
-        assertFalse(sorter.isSorted(list));
+        assertFalse(selectionSort.isSorted(list));
     }
 
     @Test
@@ -41,13 +33,13 @@ class Sorting01BubbleSortTest {
     @Test
     public void regularList() {
         MinimalIntList list = new MyList();
+        Sorting00Sorter selectionSort = new Sorting02SelectionSort();
         list.add(5);
         list.add(1);
         list.add(9);
         list.add(3);
         list.add(4);
-        MinimalIntList sortedList = sorter.sort(list);
-        assertTrue(sorter.isSorted(sortedList));
-        // lists that contains negatives, duplicates, list even in size, list odd in size
+        MinimalIntList sortedList = selectionSort.sort(list);
+        assertTrue(selectionSort.isSorted(sortedList));
     }
 }
