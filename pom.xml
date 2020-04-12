@@ -7,6 +7,12 @@
     <groupId>com.alexperal.training</groupId>
     <artifactId>java-training</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.release>14</maven.compiler.release>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -15,11 +21,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <maven.compiler.release>14</maven.compiler.release>
-    </properties>
 
     <build>
         <plugins>
@@ -39,8 +40,6 @@
                     <compilerArgs>
                         <arg>--enable-preview</arg>
                     </compilerArgs>
-                    <source>13</source>
-                    <target>13</target>
                 </configuration>
             </plugin>
         </plugins>

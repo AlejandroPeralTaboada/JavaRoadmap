@@ -2,6 +2,7 @@ package com.alexperal.training.java.lists.l02;
 
 import com.alexperal.training.java.lists.l01.MinimalIntList;
 import com.alexperal.training.java.lists.l01.MyList;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -31,6 +32,7 @@ public class Sorting02SelectionSortTest {
     }
 
     @Test
+    @Disabled
     public void regularList() {
         MinimalIntList list = new MyList();
         Sorting00Sorter selectionSort = new Sorting02SelectionSort();
