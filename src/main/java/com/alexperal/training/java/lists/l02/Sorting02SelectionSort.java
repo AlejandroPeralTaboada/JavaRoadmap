@@ -14,6 +14,9 @@ public class Sorting02SelectionSort implements Sorting00Sorter{
 
     @Override
     public MinimalIntList sort(MinimalIntList list) {
+        if(list.isEmpty() || list.length() == 1) {
+            return list;
+        }
         for(int i = 0; i < list.length(); i++) {
             int currentMin = list.get(i);
             int minIndex = i;
@@ -30,5 +33,4 @@ public class Sorting02SelectionSort implements Sorting00Sorter{
         }
         return list;
     }
-
 }
