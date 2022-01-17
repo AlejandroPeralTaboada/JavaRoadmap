@@ -1,5 +1,7 @@
 package com.alexperal.training.java.basic.b02;
 
+import java.util.Objects;
+
 public class EqualsMethod {
 
     static class MyClass {
@@ -8,6 +10,7 @@ public class EqualsMethod {
         public MyClass(int i) {
             this.i = i;
         }
+
     }
 
     static class MyClass2 {
@@ -29,7 +32,7 @@ public class EqualsMethod {
 
         @Override
         public int hashCode() {
-            return i;
+            return Objects.hash(i);
         }
     }
 
